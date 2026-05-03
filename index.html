@@ -4,6 +4,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>NAX – Automatización con IA</title>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>emailjs.init("3pFCQpRCPf-CcOrhW");</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -475,9 +477,21 @@ function enviarFormulario(){
   const n=document.getElementById('nombre').value;
   const e=document.getElementById('email').value;
   if(!n||!e){alert('Por favor, rellena al menos nombre y correo.');return;}
-  document.getElementById('success').style.display='block';
   const btn=document.querySelector('.btn-submit');
-  btn.disabled=true;btn.textContent='Enviado ✓';
+  btn.disabled=true;btn.textContent='Enviando...';
+  emailjs.send("service_o4c9osj","template_p6tx7wh",{
+    nombre:n,
+    email:e,
+    empresa:document.getElementById('empresa').value,
+    servicio:document.getElementById('servicio').value,
+    mensaje:document.getElementById('mensaje').value
+  }).then(()=>{
+    document.getElementById('success').style.display='block';
+    btn.textContent='Enviado ✓';
+  }).catch(()=>{
+    alert('Error al enviar. Inténtalo de nuevo.');
+    btn.disabled=false;btn.textContent='Enviar mensaje →';
+  });
 }
 </script>
 </body>
