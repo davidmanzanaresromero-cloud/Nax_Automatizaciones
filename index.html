@@ -523,7 +523,7 @@ function enviarFormulario(){
   if(!n||!e){alert('Por favor, rellena al menos nombre y correo.');return;}
   const btn=document.querySelector('.btn-submit');
   btn.disabled=true;btn.textContent='Enviando...';
-  emailjs.send("service_dzfan34","template_I8t8jwj",{
+  emailjs.send("service_dzfan34","template_l8t8jwj",{
     nombre:n,
     email:e,
     empresa:document.getElementById('empresa').value,
