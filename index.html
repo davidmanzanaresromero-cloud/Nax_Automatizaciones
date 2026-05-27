@@ -271,16 +271,22 @@ footer p{color:var(--muted);font-size:.85rem;}
     <p class="section-sub reveal">Cada herramienta está pensada para los procesos específicos de una gestoría o asesoría.</p>
     <div class="services-grid">
       <div class="service-card reveal">
+        <div class="service-icon">🧾</div>
+        <h3>Extracción automática de facturas de gastos</h3>
+        <p>Tus clientes te mandan facturas en PDF, foto o WhatsApp. Nuestro sistema las lee, extrae todos los datos automáticamente y los vuelca directamente en A3, Sage, Holded o tu ERP. Sin picar un solo dato a mano.</p>
+        <span class="service-tag">El mayor ahorro de tiempo</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🔗</div>
+        <h3>Integración total con tu ERP</h3>
+        <p>Conectamos los flujos de trabajo de tu gestoría con A3, Sage, ContaPlus o Holded. Los datos viajan solos entre sistemas, sin exportaciones manuales ni copiar y pegar.</p>
+        <span class="service-tag">A3 · Sage · Holded · ContaPlus</span>
+      </div>
+      <div class="service-card reveal">
         <div class="service-icon">📋</div>
         <h3>Generador automático de presupuestos</h3>
         <p>Introduce los datos del cliente y el sistema genera un presupuesto profesional en segundos, listo para enviar por email. Adiós a las plantillas de Word.</p>
         <span class="service-tag">Ahorro de 2h/día</span>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">🧾</div>
-        <h3>Gestión automatizada de facturas</h3>
-        <p>Emisión, envío, seguimiento de cobros y recordatorios automáticos a clientes con pagos pendientes. Sin intervención manual.</p>
-        <span class="service-tag">Cero facturas perdidas</span>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">🤖</div>
@@ -293,12 +299,6 @@ footer p{color:var(--muted);font-size:.85rem;}
         <h3>Alertas y recordatorios fiscales</h3>
         <p>El sistema avisa automáticamente a tus clientes de sus obligaciones fiscales próximas: IVA trimestral, IRPF, declaraciones y vencimientos.</p>
         <span class="service-tag">Nunca más un olvido</span>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">📂</div>
-        <h3>Gestión documental automática</h3>
-        <p>Clasificación, almacenamiento y recuperación automática de documentos de cada cliente. Todo organizado y accesible en segundos.</p>
-        <span class="service-tag">Orden total</span>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">📊</div>
@@ -439,7 +439,7 @@ footer p{color:var(--muted);font-size:.85rem;}
         <p class="section-tag">Hablemos</p>
         <h2>¿Cuántas horas pierde tu gestoría cada semana?</h2>
         <p>Cuéntanos cómo trabajas y te respondemos en menos de 24 horas con un diagnóstico gratuito de qué podemos automatizar.</p>
-        <div class="contact-item"><div class="contact-icon">📧</div><span>Nax.automation@hotmail.com</span></div>
+        <div class="contact-item"><div class="contact-icon">📧</div><span>contacto@naxautomations.com</span></div>
         <div class="contact-item"><div class="contact-icon">🕐</div><span>Respuesta en menos de 24h</span></div>
         <div class="contact-item"><div class="contact-icon">🌍</div><span>Trabajo 100% remoto · España y LATAM</span></div>
         <div class="contact-item"><div class="contact-icon">🔒</div><span>Cumplimiento RGPD garantizado</span></div>
@@ -479,7 +479,7 @@ footer p{color:var(--muted);font-size:.85rem;}
 
 <footer>
   <span class="footer-logo">NAX</span>
-  <p>© 2025 NAX – Automatización con IA para Gestorías · Todos los derechos reservados</p>
+  <p>© 2026 NAX – Automatización con IA para Gestorías · Todos los derechos reservados</p>
   <p style="margin-top:.5rem;">Especialistas en automatización para el sector de la gestoría y asesoría</p>
 </footer>
 
@@ -523,7 +523,7 @@ function enviarFormulario(){
   if(!n||!e){alert('Por favor, rellena al menos nombre y correo.');return;}
   const btn=document.querySelector('.btn-submit');
   btn.disabled=true;btn.textContent='Enviando...';
-  emailjs.send("service_m952lpi","template_l8t8jwj",{
+  emailjs.send("service_dzfan34","template_I8t8jwj",{
     nombre:n,
     email:e,
     empresa:document.getElementById('empresa').value,
