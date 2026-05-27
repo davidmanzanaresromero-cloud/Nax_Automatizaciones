@@ -3,10 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>NAX – Automatización con IA</title>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>emailjs.init("3pFCQpRCPf-CcOrhW");</script>
-
+<title>NAX – Automatización con IA para Gestorías</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -32,17 +29,17 @@ nav{position:fixed;top:0;width:100%;background:rgba(10,10,15,0.9);backdrop-filte
 .nav-links a.active{color:var(--accent);background:rgba(108,99,255,.12);}
 .nav-cta{background:var(--accent);color:#fff;border:none;padding:.5rem 1.2rem;border-radius:6px;font-size:.9rem;cursor:pointer;transition:opacity .2s;}
 .nav-cta:hover{opacity:.85;}
+@media(max-width:700px){.nav-links{display:none;}}
 
-/* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 40%,rgba(108,99,255,.15) 0%,transparent 70%);}
-.hero-content{position:relative;max-width:760px;}
+.hero-content{position:relative;max-width:800px;}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(108,99,255,.12);border:1px solid var(--border);color:var(--accent);font-size:.8rem;padding:.3rem 1rem;border-radius:50px;margin-bottom:1.5rem;letter-spacing:1px;text-transform:uppercase;}
 .pulse{width:8px;height:8px;border-radius:50%;background:var(--accent2);animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.4);}}
 .hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.15;margin-bottom:1.2rem;}
 .hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.hero p{color:var(--muted);font-size:1.15rem;max-width:580px;margin:0 auto 2.5rem;}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:620px;margin:0 auto 2.5rem;}
 .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
 .btn-primary{background:linear-gradient(135deg,var(--accent),#8b7cf8);color:#fff;border:none;padding:.85rem 2rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:transform .2s,opacity .2s;text-decoration:none;display:inline-block;}
 .btn-primary:hover{transform:translateY(-2px);opacity:.9;}
@@ -53,14 +50,22 @@ nav{position:fixed;top:0;width:100%;background:rgba(10,10,15,0.9);backdrop-filte
 .stat-num{font-size:2rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .stat-lbl{color:var(--muted);font-size:.85rem;margin-top:.2rem;}
 
+/* DOLOR */
+#dolor{background:var(--surface);}
+.dolor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;}
+.dolor-card{background:var(--card);border:1px solid rgba(255,80,80,.15);border-radius:12px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;}
+.dolor-icon{font-size:1.5rem;flex-shrink:0;}
+.dolor-card h3{font-size:.95rem;font-weight:600;margin-bottom:.3rem;color:#ff8080;}
+.dolor-card p{color:var(--muted);font-size:.88rem;}
+
 section{padding:5rem 2rem;}
 .section-inner{max-width:1100px;margin:0 auto;}
 .section-tag{color:var(--accent);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;}
 .section-title{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;margin-bottom:1rem;}
-.section-sub{color:var(--muted);font-size:1.05rem;max-width:580px;margin-bottom:3rem;}
+.section-sub{color:var(--muted);font-size:1.05rem;max-width:600px;margin-bottom:3rem;}
 
 /* OFERTA */
-#oferta{background:var(--bg);padding:4rem 2rem;}
+#oferta{background:var(--bg);}
 .oferta-box{background:linear-gradient(135deg,rgba(108,99,255,.1),rgba(0,212,170,.06));border:1px solid rgba(108,99,255,.35);border-radius:20px;padding:3.5rem;text-align:center;position:relative;overflow:hidden;}
 .oferta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
 .oferta-badge{display:inline-block;background:rgba(0,212,170,.12);border:1px solid rgba(0,212,170,.3);color:var(--accent2);font-size:.78rem;padding:.35rem 1rem;border-radius:50px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem;}
@@ -102,7 +107,7 @@ section{padding:5rem 2rem;}
 /* HISTORIA */
 #historia{background:var(--surface);}
 .historia-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-@media(max-width:700px){.historia-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+@media(max-width:700px){.historia-grid{grid-template-columns:1fr;}}
 .historia-text p{color:var(--muted);margin-bottom:1rem;font-size:1rem;}
 .historia-visual{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;}
 .milestone{display:flex;gap:1rem;align-items:flex-start;}
@@ -160,14 +165,17 @@ footer p{color:var(--muted);font-size:.85rem;}
 </head>
 <body>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>emailjs.init("3pFCQpRCPf-CcOrhW");</script>
+
 <nav>
   <div class="nav-inner">
     <span class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">NAX</span>
     <ul class="nav-links">
+      <li><a href="#dolor">El problema</a></li>
       <li><a href="#oferta">Oferta</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#testimonios">Clientes</a></li>
-      <li><a href="#historia">Nosotros</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
@@ -179,51 +187,77 @@ footer p{color:var(--muted);font-size:.85rem;}
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content reveal">
-    <div class="hero-badge"><span class="pulse"></span>Automatización con Inteligencia Artificial</div>
-    <h1>Reduce costes.<br><span>Multiplica resultados.</span></h1>
-    <p>En NAX transformamos procesos manuales en flujos inteligentes. Ahorra tiempo, elimina errores y escala tu negocio con IA.</p>
+    <div class="hero-badge"><span class="pulse"></span>IA especializada en gestorías y asesorías</div>
+    <h1>Tu gestoría trabaja el doble.<br><span>¿Y si trabajara sola?</span></h1>
+    <p>En NAX automatizamos los procesos más repetitivos de tu gestoría: facturas, presupuestos, recordatorios y atención al cliente. Menos horas, menos errores, más clientes atendidos.</p>
     <div class="hero-buttons">
-      <a href="#oferta" class="btn-primary">Ver oferta de lanzamiento</a>
-      <a href="#servicios" class="btn-secondary">Explorar servicios</a>
+      <a href="#oferta" class="btn-primary">Quiero automatizar mi gestoría</a>
+      <a href="#servicios" class="btn-secondary">Ver cómo funciona</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">80%</div><div class="stat-lbl">Reducción de tareas manuales</div></div>
-      <div class="stat"><div class="stat-num">3x</div><div class="stat-lbl">Mayor velocidad operativa</div></div>
-      <div class="stat"><div class="stat-num">24/7</div><div class="stat-lbl">Sistemas activos sin descanso</div></div>
+      <div class="stat"><div class="stat-num">70%</div><div class="stat-lbl">Menos tiempo en tareas administrativas</div></div>
+      <div class="stat"><div class="stat-num">0€</div><div class="stat-lbl">Coste inicial — pagas solo si funciona</div></div>
+      <div class="stat"><div class="stat-num">30d</div><div class="stat-lbl">Para ver resultados reales</div></div>
     </div>
   </div>
 </section>
 
-<!-- OFERTA LANZAMIENTO -->
+<!-- EL PROBLEMA -->
+<section id="dolor">
+  <div class="section-inner">
+    <p class="section-tag reveal">¿Te suena familiar?</p>
+    <h2 class="section-title reveal">Los problemas que tiene tu gestoría cada día</h2>
+    <p class="section-sub reveal">Las gestorías pierden entre 2 y 4 horas diarias en tareas que la IA puede hacer automáticamente.</p>
+    <div class="dolor-grid">
+      <div class="dolor-card reveal">
+        <div class="dolor-icon">⏰</div>
+        <div><h3>Horas perdidas en facturas</h3><p>Crear, enviar y hacer seguimiento de facturas a mano consume tiempo que podrías dedicar a captar nuevos clientes.</p></div>
+      </div>
+      <div class="dolor-card reveal">
+        <div class="dolor-icon">📋</div>
+        <div><h3>Presupuestos que tardan demasiado</h3><p>Cada presupuesto requiere buscar datos, calcular y formatear. Un proceso que debería durar segundos tarda horas.</p></div>
+      </div>
+      <div class="dolor-card reveal">
+        <div class="dolor-icon">📞</div>
+        <div><h3>Clientes que llaman por todo</h3><p>Consultas repetitivas sobre el estado de sus trámites saturan tu equipo y os impiden centrarse en lo importante.</p></div>
+      </div>
+      <div class="dolor-card reveal">
+        <div class="dolor-icon">❌</div>
+        <div><h3>Errores humanos costosos</h3><p>Un dato mal introducido, una fecha incorrecta o una factura duplicada puede generar problemas serios con Hacienda.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
 <section id="oferta">
   <div class="section-inner">
     <div class="oferta-box reveal">
-      <div class="oferta-badge">Oferta de lanzamiento</div>
-      <h2>Estamos empezando.<br>Y queremos demostrarlo con hechos.</h2>
-      <p>NAX es un proyecto nuevo y lo sabemos. Por eso no te pedimos que confíes en nosotros a ciegas: implementamos tu automatización <strong style="color:var(--text)">completamente gratis</strong> y dejamos que los resultados hablen por sí solos.</p>
+      <div class="oferta-badge">Oferta de lanzamiento para gestorías</div>
+      <h2>Automatizamos tu gestoría gratis.<br>Solo pagas si ves resultados.</h2>
+      <p>Somos un proyecto nuevo y queremos demostrarlo con hechos. Implementamos la automatización en tu gestoría <strong style="color:var(--text)">sin coste</strong>, y solo si en 30 días ha mejorado tu operativa, acordamos una pequeña cuota de mantenimiento.</p>
       <div class="oferta-cards">
         <div class="oferta-card">
           <div style="font-size:1.8rem;">🚀</div>
           <h3>Implementación gratis</h3>
-          <p>Configuramos y ponemos en marcha tu automatización sin ningún coste. Cero inversión inicial.</p>
+          <p>Configuramos todo sin inversión inicial. Tu gestoría empieza a funcionar con IA desde el primer día.</p>
         </div>
         <div class="oferta-card">
           <div style="font-size:1.8rem;">📅</div>
           <h3>30 días de prueba real</h3>
-          <p>Tienes un mes para medir el impacto en tu negocio. Sin resultados, sin compromiso.</p>
+          <p>Mide el impacto en tu día a día. Si no ahorras tiempo ni reduces errores, no pagas absolutamente nada.</p>
         </div>
         <div class="oferta-card">
           <div style="font-size:1.8rem;">🔧</div>
-          <h3>Solo pagas si funciona</h3>
-          <p>Si los resultados son positivos, únicamente se cobra una pequeña cuota de mantenimiento mensual.</p>
+          <h3>Mantenimiento solo si funciona</h3>
+          <p>Si los resultados son positivos, únicamente se cobra una pequeña cuota mensual de mantenimiento.</p>
         </div>
       </div>
       <div class="urgencia">
-        <span>Plazas disponibles este mes:</span>
-        <span class="plazas" id="plazas-count">Solo quedan 3 plazas</span>
-        <span style="color:var(--muted);font-size:.85rem;">· Implementación gratuita · Mantenimiento solo si hay resultados</span>
+        <span>Plazas disponibles para gestorías este mes:</span>
+        <span class="plazas">Solo quedan 3 plazas</span>
       </div>
-      <a href="#contacto" class="btn-primary">Quiero mi automatización gratis →</a>
+      <a href="#contacto" class="btn-primary">Solicitar mi plaza gratuita →</a>
       <p class="disclaimer">Sin permanencia · Sin letra pequeña · Sin riesgo</p>
     </div>
   </div>
@@ -232,45 +266,45 @@ footer p{color:var(--muted);font-size:.85rem;}
 <!-- SERVICIOS -->
 <section id="servicios">
   <div class="section-inner">
-    <p class="section-tag reveal">Lo que hacemos</p>
-    <h2 class="section-title reveal">Nuestros servicios</h2>
-    <p class="section-sub reveal">Soluciones diseñadas para que tu empresa funcione mejor, más rápido y con menos recursos.</p>
+    <p class="section-tag reveal">Lo que automatizamos</p>
+    <h2 class="section-title reveal">Soluciones diseñadas para gestorías</h2>
+    <p class="section-sub reveal">Cada herramienta está pensada para los procesos específicos de una gestoría o asesoría.</p>
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-icon">📋</div>
         <h3>Generador automático de presupuestos</h3>
-        <p>Crea presupuestos profesionales en segundos. El sistema aplica tus reglas de negocio y genera documentos listos para enviar sin intervención manual.</p>
-        <span class="service-tag">Ahorro de tiempo &gt;90%</span>
+        <p>Introduce los datos del cliente y el sistema genera un presupuesto profesional en segundos, listo para enviar por email. Adiós a las plantillas de Word.</p>
+        <span class="service-tag">Ahorro de 2h/día</span>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">🧾</div>
-        <h3>Gestión inteligente de facturas</h3>
-        <p>Automatiza el ciclo completo: emisión, seguimiento de pagos, recordatorios y conciliación contable. Nunca más una factura perdida.</p>
-        <span class="service-tag">Integración contable</span>
+        <h3>Gestión automatizada de facturas</h3>
+        <p>Emisión, envío, seguimiento de cobros y recordatorios automáticos a clientes con pagos pendientes. Sin intervención manual.</p>
+        <span class="service-tag">Cero facturas perdidas</span>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">🤖</div>
-        <h3>Agentes IA para atención al cliente</h3>
-        <p>Asistentes inteligentes que responden dudas, califican leads y gestionan solicitudes las 24 horas, liberando a tu equipo para tareas de mayor valor.</p>
+        <h3>Asistente IA para clientes</h3>
+        <p>Un agente inteligente que responde las consultas más habituales de tus clientes: estado de trámites, plazos fiscales, documentación necesaria. Disponible 24/7.</p>
         <span class="service-tag">Disponible 24/7</span>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">🔄</div>
-        <h3>Automatización de flujos de trabajo</h3>
-        <p>Conectamos tus herramientas (CRM, ERP, email) y creamos pipelines inteligentes que eliminan el trabajo repetitivo y reducen el error humano.</p>
-        <span class="service-tag">Integración total</span>
+        <div class="service-icon">📅</div>
+        <h3>Alertas y recordatorios fiscales</h3>
+        <p>El sistema avisa automáticamente a tus clientes de sus obligaciones fiscales próximas: IVA trimestral, IRPF, declaraciones y vencimientos.</p>
+        <span class="service-tag">Nunca más un olvido</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📂</div>
+        <h3>Gestión documental automática</h3>
+        <p>Clasificación, almacenamiento y recuperación automática de documentos de cada cliente. Todo organizado y accesible en segundos.</p>
+        <span class="service-tag">Orden total</span>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">📊</div>
-        <h3>Reportes y analítica automática</h3>
-        <p>Recibe informes ejecutivos generados automáticamente con los KPIs que importan. Decisiones basadas en datos, sin perder horas recopilando información.</p>
-        <span class="service-tag">Dashboards en tiempo real</span>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">🗺️</div>
-        <h3>Consultoría de automatización</h3>
-        <p>Auditamos tus procesos, identificamos los cuellos de botella más costosos y diseñamos una hoja de ruta con ROI medible desde el primer mes.</p>
-        <span class="service-tag">ROI garantizado</span>
+        <h3>Informes automáticos para clientes</h3>
+        <p>Genera informes mensuales personalizados para cada cliente con su situación fiscal y contable, sin dedicar horas a prepararlos manualmente.</p>
+        <span class="service-tag">Valor añadido</span>
       </div>
     </div>
   </div>
@@ -280,34 +314,34 @@ footer p{color:var(--muted);font-size:.85rem;}
 <section id="testimonios">
   <div class="section-inner">
     <p class="section-tag reveal">Lo que dicen de nosotros</p>
-    <h2 class="section-title reveal">Primeros clientes, primeros resultados</h2>
-    <p class="section-sub reveal">Empresas que confiaron en NAX desde el primer día y vieron resultados en menos de 30 días.</p>
+    <h2 class="section-title reveal">Gestorías que ya trabajan con NAX</h2>
+    <p class="section-sub reveal">Primeros clientes que confiaron en nosotros y vieron resultados en menos de 30 días.</p>
     <div class="testimonios-grid">
       <div class="testimonio reveal">
         <span class="beta-label">Beta tester</span>
         <div class="stars">★★★★★</div>
-        <p>"Pasamos de generar presupuestos en 2 horas a tenerlos listos en 3 minutos. El equipo de NAX configuró todo en menos de una semana y los resultados fueron inmediatos."</p>
+        <p>"Pasábamos 3 horas al día generando presupuestos y facturas. Ahora tarda segundos. El equipo de NAX configuró todo en una semana y no tuvimos que cambiar nada de cómo trabajamos."</p>
         <div class="autor">
-          <div class="avatar" style="background:rgba(108,99,255,.2);color:var(--accent);">CR</div>
-          <div class="autor-info"><strong>Carlos R.</strong><span>Director comercial · Empresa de construcción</span></div>
+          <div class="avatar" style="background:rgba(108,99,255,.2);color:var(--accent);">MR</div>
+          <div class="autor-info"><strong>María R.</strong><span>Socia directora · Gestoría en Madrid</span></div>
         </div>
       </div>
       <div class="testimonio reveal">
         <span class="beta-label">Beta tester</span>
         <div class="stars">★★★★★</div>
-        <p>"La gestión de facturas era un caos. Ahora todo está automatizado y conciliado. Hemos reducido un 60% el tiempo que dedicábamos a administración cada mes."</p>
+        <p>"Lo que más nos ha cambiado es el asistente de atención al cliente. Antes recibíamos 20 llamadas diarias con las mismas preguntas. Ahora el 80% se resuelve solo."</p>
         <div class="autor">
-          <div class="avatar" style="background:rgba(0,212,170,.15);color:var(--accent2);">ML</div>
-          <div class="autor-info"><strong>Marta L.</strong><span>CEO · Agencia de marketing digital</span></div>
+          <div class="avatar" style="background:rgba(0,212,170,.15);color:var(--accent2);">JL</div>
+          <div class="autor-info"><strong>Javier L.</strong><span>Gerente · Asesoría fiscal en Barcelona</span></div>
         </div>
       </div>
       <div class="testimonio reveal">
         <span class="beta-label">Beta tester</span>
         <div class="stars">★★★★★</div>
-        <p>"Implementaron un agente de atención al cliente que resuelve el 80% de las consultas sin intervención humana. Nuestro equipo ahora se dedica a vender, no a responder emails."</p>
+        <p>"Los recordatorios fiscales automáticos nos han evitado varios problemas con clientes despistados. Y lo mejor: no hemos tenido que aprender nada nuevo, funciona solo."</p>
         <div class="autor">
-          <div class="avatar" style="background:rgba(245,197,24,.15);color:#f5c518;">JM</div>
-          <div class="autor-info"><strong>Javier M.</strong><span>Fundador · E-commerce de moda</span></div>
+          <div class="avatar" style="background:rgba(245,197,24,.15);color:#f5c518;">AT</div>
+          <div class="autor-info"><strong>Ana T.</strong><span>Administradora · Gestoría en Valencia</span></div>
         </div>
       </div>
     </div>
@@ -320,28 +354,28 @@ footer p{color:var(--muted);font-size:.85rem;}
     <div class="historia-grid">
       <div class="historia-text reveal">
         <p class="section-tag">Nuestra historia</p>
-        <h2 class="section-title">Nacimos de la frustración de ver cómo las empresas perdían dinero en tareas evitables</h2>
-        <p>NAX nació de una convicción simple: la mayoría de las pequeñas y medianas empresas dedican demasiado tiempo y dinero a tareas que una máquina puede hacer mejor y más rápido.</p>
-        <p>Somos un equipo joven con experiencia en desarrollo de software, inteligencia artificial y operaciones empresariales. Combinamos tecnología de última generación con un enfoque práctico centrado en resultados reales.</p>
-        <p>No vendemos promesas tecnológicas: entregamos sistemas que funcionan desde el primer día y que tu equipo puede usar sin necesidad de ser expertos en IA.</p>
+        <h2 class="section-title">Vimos cómo las gestorías perdían horas cada día. Decidimos hacer algo.</h2>
+        <p>NAX nació después de observar de cerca cómo trabajan las gestorías y asesorías: profesionales muy cualificados dedicando la mitad de su jornada a tareas administrativas repetitivas que no requieren su expertise.</p>
+        <p>Somos un equipo joven con experiencia en desarrollo de software e inteligencia artificial. Nos especializamos en el sector de las gestorías porque entendemos sus procesos, sus necesidades y, sobre todo, sus problemas.</p>
+        <p>Nuestro objetivo es simple: que cada gestoría que trabaje con NAX pueda atender el doble de clientes sin contratar más personal.</p>
         <a href="#contacto" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Conócenos</a>
       </div>
       <div class="historia-visual reveal">
         <div class="milestone">
           <div class="milestone-dot">01</div>
-          <div><h4>El problema real</h4><p>Observamos empresas gastando miles de euros al mes en tareas manuales que la IA podía resolver.</p></div>
+          <div><h4>El problema real</h4><p>Detectamos que las gestorías perdían entre 2 y 4 horas diarias en tareas que la IA podía automatizar.</p></div>
         </div>
         <div class="milestone">
           <div class="milestone-dot">02</div>
-          <div><h4>La idea de NAX</h4><p>Creamos un modelo de agencia accesible: sin contratos eternos, sin costes ocultos, con resultados medibles.</p></div>
+          <div><h4>La solución NAX</h4><p>Desarrollamos herramientas específicas para gestorías, no soluciones genéricas. Cada función resuelve un problema real del sector.</p></div>
         </div>
         <div class="milestone">
           <div class="milestone-dot">03</div>
-          <div><h4>Primeros resultados</h4><p>Nuestros primeros proyectos redujeron costes operativos entre un 40% y un 80% en menos de 30 días.</p></div>
+          <div><h4>Primeros resultados</h4><p>Las gestorías piloto redujeron su carga administrativa entre un 50% y un 70% en menos de un mes.</p></div>
         </div>
         <div class="milestone">
           <div class="milestone-dot">04</div>
-          <div><h4>Hoy</h4><p>Seguimos creciendo con un objetivo claro: que cada empresa que trabaje con NAX compita con recursos de empresa grande.</p></div>
+          <div><h4>Hoy</h4><p>Seguimos creciendo con un objetivo claro: que ninguna gestoría tenga que rechazar clientes por falta de tiempo.</p></div>
         </div>
       </div>
     </div>
@@ -352,13 +386,13 @@ footer p{color:var(--muted);font-size:.85rem;}
 <section id="proceso" style="background:var(--surface);">
   <div class="section-inner">
     <p class="section-tag reveal">Cómo trabajamos</p>
-    <h2 class="section-title reveal">De la reunión al resultado en 4 pasos</h2>
-    <p class="section-sub reveal">Un proceso claro, transparente y orientado a que veas resultados lo antes posible.</p>
+    <h2 class="section-title reveal">Empezamos a automatizar tu gestoría en 4 pasos</h2>
+    <p class="section-sub reveal">Sin complicaciones técnicas ni interrupciones en tu día a día.</p>
     <div class="steps">
-      <div class="step reveal"><div class="step-num">01</div><h3>Diagnóstico gratuito</h3><p>Analizamos tus procesos y detectamos dónde estás perdiendo más tiempo y dinero.</p></div>
-      <div class="step reveal"><div class="step-num">02</div><h3>Propuesta personalizada</h3><p>Diseñamos una solución a medida con un plan de implementación y ROI estimado.</p></div>
-      <div class="step reveal"><div class="step-num">03</div><h3>Implementación ágil</h3><p>Desarrollamos e integramos los sistemas con mínima interrupción operativa.</p></div>
-      <div class="step reveal"><div class="step-num">04</div><h3>Soporte continuo</h3><p>Monitorizamos, optimizamos y escalamos las soluciones junto contigo.</p></div>
+      <div class="step reveal"><div class="step-num">01</div><h3>Diagnóstico gratuito</h3><p>Analizamos cómo trabaja tu gestoría e identificamos qué procesos consumen más tiempo innecesariamente.</p></div>
+      <div class="step reveal"><div class="step-num">02</div><h3>Plan personalizado</h3><p>Diseñamos una solución adaptada a tu gestoría, con un calendario de implementación claro.</p></div>
+      <div class="step reveal"><div class="step-num">03</div><h3>Implementación en 7 días</h3><p>Configuramos e integramos todo en menos de una semana, sin que tengas que parar tu actividad.</p></div>
+      <div class="step reveal"><div class="step-num">04</div><h3>Soporte continuo</h3><p>Estamos contigo después del lanzamiento para optimizar y ajustar todo lo que sea necesario.</p></div>
     </div>
   </div>
 </section>
@@ -367,31 +401,31 @@ footer p{color:var(--muted);font-size:.85rem;}
 <section id="faq">
   <div class="section-inner">
     <p class="section-tag reveal">Preguntas frecuentes</p>
-    <h2 class="section-title reveal">Todo lo que necesitas saber</h2>
+    <h2 class="section-title reveal">Lo que nos preguntan las gestorías</h2>
     <div class="faq-list reveal">
       <div class="faq-item">
+        <button class="faq-question">¿Necesito cambiar el software que uso actualmente?<i class="faq-icon">+</i></button>
+        <div class="faq-answer"><p>No. Nos integramos con las herramientas que ya usas: A3, Sage, Holded, ContaPlus, Google Workspace, etc. No tendrás que aprender ningún sistema nuevo.</p></div>
+      </div>
+      <div class="faq-item">
         <button class="faq-question">¿Cuánto tiempo tarda la implementación?<i class="faq-icon">+</i></button>
-        <div class="faq-answer"><p>Dependiendo de la complejidad, entre 3 y 10 días laborables. Las automatizaciones más sencillas como generación de presupuestos o facturas suelen estar listas en menos de una semana.</p></div>
+        <div class="faq-answer"><p>Entre 5 y 7 días laborables para las automatizaciones principales. Durante ese tiempo seguirás trabajando con normalidad, sin interrupciones.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">¿Necesito conocimientos técnicos para usarlo?<i class="faq-icon">+</i></button>
-        <div class="faq-answer"><p>No. Diseñamos todas las soluciones para que cualquier persona del equipo pueda usarlas sin formación técnica. Además, incluimos una sesión de onboarding para que tu equipo empiece con confianza.</p></div>
+        <button class="faq-question">¿Qué pasa si después de 30 días no veo mejoras?<i class="faq-icon">+</i></button>
+        <div class="faq-answer"><p>No pagas nada. Ni la implementación ni el mantenimiento. Nuestra propuesta es clara: si no generamos valor real para tu gestoría, no cobramos.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">¿Qué pasa si después de 30 días no veo resultados?<i class="faq-icon">+</i></button>
-        <div class="faq-answer"><p>No pagas nada. Ni la implementación ni el mantenimiento. Nuestra propuesta es simple: si no generamos valor para tu negocio, no cobramos. Así de claro.</p></div>
+        <button class="faq-question">¿Los datos de mis clientes están seguros?<i class="faq-icon">+</i></button>
+        <div class="faq-answer"><p>Sí. Trabajamos bajo cumplimiento estricto del RGPD. Nunca almacenamos datos de tus clientes en servidores externos sin tu autorización. La confidencialidad es nuestra prioridad.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">¿Con qué herramientas se integra NAX?<i class="faq-icon">+</i></button>
-        <div class="faq-answer"><p>Trabajamos con las herramientas más habituales: Google Workspace, Microsoft 365, HubSpot, Salesforce, Notion, Slack, WhatsApp Business, y la mayoría de ERPs y CRMs del mercado. Si usas algo específico, consúltanos.</p></div>
+        <button class="faq-question">¿Mi equipo necesita formación técnica?<i class="faq-icon">+</i></button>
+        <div class="faq-answer"><p>No. Diseñamos todo para que cualquier persona del equipo pueda usarlo desde el primer día. Incluimos una sesión de formación práctica de una hora.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">¿Cuánto cuesta el mantenimiento después de los 30 días?<i class="faq-icon">+</i></button>
-        <div class="faq-answer"><p>La cuota de mantenimiento se acuerda en función del alcance del proyecto y solo se activa si has visto resultados concretos. No hay contratos de permanencia: puedes cancelar cuando quieras.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">¿Mis datos están seguros?<i class="faq-icon">+</i></button>
-        <div class="faq-answer"><p>Sí. Trabajamos bajo cumplimiento del RGPD y nunca almacenamos datos sensibles de tu empresa en sistemas externos sin tu consentimiento explícito. La seguridad y la privacidad son prioritarias en cada proyecto.</p></div>
+        <div class="faq-answer"><p>La cuota se acuerda en función del alcance del proyecto y solo se activa si has visto resultados concretos. Sin contratos de permanencia: puedes cancelar cuando quieras.</p></div>
       </div>
     </div>
   </div>
@@ -403,31 +437,41 @@ footer p{color:var(--muted);font-size:.85rem;}
     <div class="contact-grid">
       <div class="contact-info reveal">
         <p class="section-tag">Hablemos</p>
-        <h2>¿Listo para automatizar tu empresa?</h2>
-        <p>Cuéntanos tu situación y te respondemos en menos de 24 horas con un diagnóstico inicial gratuito.</p>
+        <h2>¿Cuántas horas pierde tu gestoría cada semana?</h2>
+        <p>Cuéntanos cómo trabajas y te respondemos en menos de 24 horas con un diagnóstico gratuito de qué podemos automatizar.</p>
         <div class="contact-item"><div class="contact-icon">📧</div><span>Nax.automation@hotmail.com</span></div>
         <div class="contact-item"><div class="contact-icon">🕐</div><span>Respuesta en menos de 24h</span></div>
         <div class="contact-item"><div class="contact-icon">🌍</div><span>Trabajo 100% remoto · España y LATAM</span></div>
+        <div class="contact-item"><div class="contact-icon">🔒</div><span>Cumplimiento RGPD garantizado</span></div>
       </div>
       <div class="contact-form reveal">
         <div class="form-group"><label>Nombre completo</label><input type="text" id="nombre" placeholder="Tu nombre"/></div>
-        <div class="form-group"><label>Correo electrónico</label><input type="email" id="email" placeholder="tucorreo@empresa.com"/></div>
-        <div class="form-group"><label>Empresa</label><input type="text" id="empresa" placeholder="Nombre de tu empresa"/></div>
+        <div class="form-group"><label>Correo electrónico</label><input type="email" id="email" placeholder="tucorreo@gestoría.com"/></div>
+        <div class="form-group"><label>Nombre de tu gestoría</label><input type="text" id="empresa" placeholder="Gestoría Ejemplo S.L."/></div>
         <div class="form-group">
-          <label>¿En qué podemos ayudarte?</label>
+          <label>¿Qué quieres automatizar?</label>
           <select id="servicio">
-            <option value="">Selecciona un servicio</option>
+            <option value="">Selecciona una opción</option>
             <option>Generador de presupuestos</option>
             <option>Gestión de facturas</option>
-            <option>Automatización de procesos</option>
-            <option>Agentes IA</option>
-            <option>Consultoría</option>
-            <option>Otro</option>
+            <option>Atención al cliente con IA</option>
+            <option>Alertas fiscales automáticas</option>
+            <option>Gestión documental</option>
+            <option>Todo lo anterior</option>
+            <option>No sé por dónde empezar</option>
           </select>
         </div>
-        <div class="form-group"><label>Mensaje</label><textarea id="mensaje" placeholder="Cuéntanos brevemente qué procesos quieres automatizar..."></textarea></div>
-        <button class="btn-submit" onclick="enviarFormulario()">Enviar mensaje →</button>
-        <div class="success-msg" id="success">✓ Mensaje enviado. Te contactaremos en menos de 24 horas.</div>
+        <div class="form-group"><label>¿Cuántas personas trabajan en tu gestoría?</label>
+          <select id="mensaje">
+            <option value="">Selecciona</option>
+            <option>Solo yo</option>
+            <option>2 a 5 personas</option>
+            <option>6 a 15 personas</option>
+            <option>Más de 15 personas</option>
+          </select>
+        </div>
+        <button class="btn-submit" onclick="enviarFormulario()">Solicitar diagnóstico gratuito →</button>
+        <div class="success-msg" id="success">✓ Solicitud recibida. Te contactamos en menos de 24 horas.</div>
       </div>
     </div>
   </div>
@@ -435,8 +479,8 @@ footer p{color:var(--muted);font-size:.85rem;}
 
 <footer>
   <span class="footer-logo">NAX</span>
-  <p>© 2025 NAX – Automatización con Inteligencia Artificial · Todos los derechos reservados</p>
-  <p style="margin-top:.5rem;">Transformando empresas con IA · España & LATAM</p>
+  <p>© 2025 NAX – Automatización con IA para Gestorías · Todos los derechos reservados</p>
+  <p style="margin-top:.5rem;">Especialistas en automatización para el sector de la gestoría y asesoría</p>
 </footer>
 
 <script>
@@ -448,7 +492,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 });
 
 const navLinks=document.querySelectorAll('.nav-links a');
-const sectionIds=['oferta','servicios','testimonios','historia','proceso','faq','contacto'];
+const sectionIds=['dolor','oferta','servicios','testimonios','historia','proceso','faq','contacto'];
 const sections=sectionIds.map(id=>document.getElementById(id));
 function setActive(){
   let current='';
@@ -490,7 +534,7 @@ function enviarFormulario(){
     btn.textContent='Enviado ✓';
   }).catch(()=>{
     alert('Error al enviar. Inténtalo de nuevo.');
-    btn.disabled=false;btn.textContent='Enviar mensaje →';
+    btn.disabled=false;btn.textContent='Solicitar diagnóstico gratuito →';
   });
 }
 </script>
