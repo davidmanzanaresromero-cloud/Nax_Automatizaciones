@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>NAX | Automatización documental para gestorías de transporte</title>
-<meta name="description" content="Eliminamos el trabajo manual de documentación y vencimientos en gestorías de transporte. Sin tecnicismos. Sin riesgo. Resultados en días."/>
-<meta name="keywords" content="automatización gestorías transporte, control vencimientos transporte, gestión documental gestoría, automatizar documentación transportistas"/>
-<meta property="og:title" content="NAX | Automatización documental para gestorías de transporte"/>
-<meta property="og:description" content="Reducimos hasta un 70% el tiempo administrativo en gestorías de transporte automatizando documentación y vencimientos."/>
+<title>NAX | Automatización de facturas para gestorías</title>
+<meta name="description" content="Eliminamos el caos de facturas en tu gestoría. Recibimos, clasificamos, organizamos y archivamos las facturas de tus clientes de forma automática. Sin picar datos. Sin errores."/>
+<meta name="keywords" content="automatizar facturas gestoría, organización facturas gestoría, gestión facturas automática, digitalización facturas gestoría"/>
+<meta property="og:title" content="NAX | Automatización de facturas para gestorías"/>
+<meta property="og:description" content="Eliminamos el caos de facturas en tu gestoría. Clasificamos y organizamos las facturas de tus clientes automáticamente."/>
 <meta property="og:url" content="https://www.naxautomations.com"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://www.naxautomations.com"/>
@@ -15,20 +15,15 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --bg:#0a0a0f;
-  --surface:#12121a;
-  --card:#1a1a26;
-  --accent:#6c63ff;
-  --accent2:#00d4aa;
-  --text:#f0f0ff;
-  --muted:#8888aa;
+  --bg:#0a0a0f;--surface:#12121a;--card:#1a1a26;
+  --accent:#6c63ff;--accent2:#00d4aa;
+  --text:#f0f0ff;--muted:#8888aa;
   --border:rgba(108,99,255,0.2);
   --font:'Segoe UI',system-ui,sans-serif;
 }
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;overflow-x:hidden;}
 
-/* NAV */
 nav{position:fixed;top:0;width:100%;background:rgba(10,10,15,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:100;padding:0 2rem;}
 .nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
 .logo{font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px;cursor:pointer;}
@@ -40,7 +35,6 @@ nav{position:fixed;top:0;width:100%;background:rgba(10,10,15,0.92);backdrop-filt
 .nav-cta:hover{opacity:.85;}
 @media(max-width:700px){.nav-links{display:none;}}
 
-/* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:7rem 2rem 4rem;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 40%,rgba(108,99,255,.13) 0%,transparent 70%);}
 .hero-content{position:relative;max-width:780px;}
@@ -59,21 +53,18 @@ nav{position:fixed;top:0;width:100%;background:rgba(10,10,15,0.92);backdrop-filt
 .stat-num{font-size:2rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .stat-lbl{color:var(--muted);font-size:.82rem;margin-top:.2rem;}
 
-/* SECTIONS */
 section{padding:5rem 2rem;}
 .inner{max-width:1000px;margin:0 auto;}
 .tag{color:var(--accent);font-size:.78rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;}
 .sec-title{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:700;margin-bottom:1rem;}
 .sec-sub{color:var(--muted);font-size:1rem;max-width:560px;margin-bottom:3rem;}
 
-/* DOLOR */
 #dolor{background:var(--surface);}
 .dolor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
 .dolor-card{background:var(--card);border:1px solid rgba(255,100,100,.15);border-radius:12px;padding:1.4rem;display:flex;gap:.8rem;align-items:flex-start;}
 .dolor-card h3{font-size:.92rem;font-weight:600;color:#ff8888;margin-bottom:.2rem;}
 .dolor-card p{color:var(--muted);font-size:.85rem;}
 
-/* SOLUCIÓN */
 #solucion{background:var(--bg);}
 .sol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
 .sol-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;}
@@ -81,7 +72,6 @@ section{padding:5rem 2rem;}
 .sol-card h3{font-size:.95rem;font-weight:600;margin-bottom:.3rem;}
 .sol-card p{color:var(--muted);font-size:.85rem;}
 
-/* SERVICIO ESTRELLA */
 #servicio{background:var(--surface);}
 .star-box{background:linear-gradient(135deg,rgba(108,99,255,.1),rgba(0,212,170,.06));border:1px solid rgba(108,99,255,.4);border-radius:18px;padding:3rem;position:relative;overflow:hidden;max-width:780px;}
 .star-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
@@ -89,18 +79,16 @@ section{padding:5rem 2rem;}
 .star-box h2{font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;margin-bottom:1rem;}
 .star-box p{color:var(--muted);font-size:1rem;margin-bottom:1.5rem;max-width:560px;}
 .feature-list{display:flex;flex-direction:column;gap:.6rem;margin-bottom:2rem;}
-.feature-list li{display:flex;align-items:center;gap:.7rem;color:var(--muted);font-size:.95rem;list-style:none;}
-.feature-list li::before{content:'✓';color:var(--accent2);font-weight:700;flex-shrink:0;}
+.feature-list li{display:flex;align-items:flex-start;gap:.7rem;color:var(--muted);font-size:.95rem;list-style:none;}
+.feature-list li::before{content:'✓';color:var(--accent2);font-weight:700;flex-shrink:0;margin-top:.1rem;}
 
-/* PASOS */
 #pasos{background:var(--bg);}
 .pasos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
-.paso{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.8rem;position:relative;}
+.paso{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.8rem;}
 .paso-num{font-size:2.8rem;font-weight:800;background:linear-gradient(135deg,rgba(108,99,255,.4),rgba(0,212,170,.4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:.7rem;}
 .paso h3{font-size:1rem;font-weight:600;margin-bottom:.4rem;}
 .paso p{color:var(--muted);font-size:.88rem;}
 
-/* RESULTADOS */
 #resultados{background:var(--surface);}
 .res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;}
 .res-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center;}
@@ -108,13 +96,11 @@ section{padding:5rem 2rem;}
 .res-card h3{font-size:.95rem;font-weight:600;margin-bottom:.3rem;}
 .res-card p{color:var(--muted);font-size:.82rem;}
 
-/* HONESTIDAD */
 #honestidad{background:var(--bg);}
 .hon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;}
 .hon-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.8rem;}
 .hon-card p{color:var(--muted);font-size:.95rem;line-height:1.7;}
 
-/* PILOTO */
 #piloto{background:var(--surface);}
 .piloto-box{background:linear-gradient(135deg,rgba(108,99,255,.1),rgba(0,212,170,.06));border:1px solid rgba(108,99,255,.35);border-radius:18px;padding:3rem;text-align:center;position:relative;overflow:hidden;max-width:700px;margin:0 auto;}
 .piloto-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
@@ -123,7 +109,6 @@ section{padding:5rem 2rem;}
 .plazas-badge{display:inline-block;background:rgba(0,212,170,.1);border:1px dashed rgba(0,212,170,.4);color:var(--accent2);font-size:.9rem;font-weight:600;padding:.6rem 1.4rem;border-radius:8px;margin-bottom:1.8rem;}
 .disclaimer{color:var(--muted);font-size:.8rem;margin-top:.8rem;}
 
-/* CONTACTO */
 #contacto{background:var(--bg);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
 @media(max-width:700px){.contact-grid{grid-template-columns:1fr;}}
@@ -163,10 +148,10 @@ footer p{color:var(--muted);font-size:.82rem;}
       <li><a href="#dolor">El problema</a></li>
       <li><a href="#servicio">Servicio</a></li>
       <li><a href="#pasos">Cómo funciona</a></li>
-      <li><a href="#piloto">Piloto</a></li>
+      <li><a href="#piloto">Oferta</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
-    <button class="nav-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Agendar llamada</button>
+    <button class="nav-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Solicitar diagnóstico</button>
   </div>
 </nav>
 
@@ -174,17 +159,17 @@ footer p{color:var(--muted);font-size:.82rem;}
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content reveal">
-    <div class="hero-badge"><span class="pulse"></span>Especialistas en gestorías de transporte</div>
-    <h1>Reducimos hasta un 70% el tiempo administrativo en gestorías de transporte <span>automatizando documentación y vencimientos.</span></h1>
-    <p>Sin tecnicismos. Sin cambiar cómo trabajas. El sistema funciona solo y tú te dedicas a lo que importa: tus clientes.</p>
+    <div class="hero-badge"><span class="pulse"></span>Especialistas en gestión de facturas para gestorías</div>
+    <h1>Acabamos con el caos de facturas<br>en tu gestoría.<br><span>De forma completamente automática.</span></h1>
+    <p>Tus clientes te mandan facturas por email, WhatsApp o en papel. Nosotros las recibimos, leemos, clasificamos y archivamos solas. Sin que nadie las toque. Sin errores.</p>
     <div class="hero-btns">
-      <a href="#contacto" class="btn-primary">Solicitar diagnóstico gratuito</a>
-      <a href="#pasos" class="btn-secondary">Ver cómo funciona</a>
+      <a href="#piloto" class="btn-primary">Ver la oferta de lanzamiento</a>
+      <a href="#pasos" class="btn-secondary">Cómo funciona</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">70%</div><div class="stat-lbl">Menos tiempo administrativo</div></div>
+      <div class="stat"><div class="stat-num">90%</div><div class="stat-lbl">Menos tiempo procesando facturas</div></div>
+      <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">Facturas perdidas o mal archivadas</div></div>
       <div class="stat"><div class="stat-num">30d</div><div class="stat-lbl">Para ver resultados reales</div></div>
-      <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">Riesgo para tu gestoría</div></div>
     </div>
   </div>
 </section>
@@ -193,32 +178,32 @@ footer p{color:var(--muted);font-size:.82rem;}
 <section id="dolor">
   <div class="inner">
     <p class="tag reveal">¿Te suena esto?</p>
-    <h2 class="sec-title reveal">Los problemas de tiempo más comunes en gestorías de transporte</h2>
-    <p class="sec-sub reveal">Si gestionas documentación de transportistas, esto pasa en tu gestoría cada día.</p>
+    <h2 class="sec-title reveal">El problema de facturas que tiene tu gestoría cada día</h2>
+    <p class="sec-sub reveal">Si gestionas las facturas de varios clientes, esto ocurre en tu gestoría constantemente.</p>
     <div class="dolor-grid">
       <div class="dolor-card reveal">
         <div style="font-size:1.4rem;flex-shrink:0;">📱</div>
-        <div><h3>Documentos por WhatsApp</h3><p>Recibes fotos de carnets, ITVs y seguros por WhatsApp. Desorganizados, sin nombre, mezclados.</p></div>
+        <div><h3>Facturas por WhatsApp y email</h3><p>Recibes fotos borrosas, PDFs sin nombre y archivos mezclados de decenas de clientes distintos.</p></div>
       </div>
       <div class="dolor-card reveal">
-        <div style="font-size:1.4rem;flex-shrink:0;">⏰</div>
-        <div><h3>Vencimientos olvidados</h3><p>ITVs caducadas, seguros vencidos, carnets expirados. Un olvido puede costar una multa enorme al cliente.</p></div>
+        <div style="font-size:1.4rem;flex-shrink:0;">⌨️</div>
+        <div><h3>Picar datos a mano</h3><p>Alguien de tu equipo abre cada factura, lee los datos y los introduce manualmente en el sistema. Hora tras hora.</p></div>
       </div>
       <div class="dolor-card reveal">
-        <div style="font-size:1.4rem;flex-shrink:0;">📊</div>
-        <div><h3>Excels desactualizados</h3><p>Llevas el control en un Excel que nadie actualiza a tiempo. Nunca sabes si está al día.</p></div>
+        <div style="font-size:1.4rem;flex-shrink:0;">❌</div>
+        <div><h3>Errores de transcripción</h3><p>Un NIF mal copiado, un importe equivocado, un proveedor duplicado. Los errores manuales son inevitables.</p></div>
       </div>
       <div class="dolor-card reveal">
         <div style="font-size:1.4rem;flex-shrink:0;">🔍</div>
-        <div><h3>Horas buscando archivos</h3><p>Cuando necesitas un documento urgente, pierdes 20 minutos buscando entre carpetas y correos.</p></div>
+        <div><h3>Facturas imposibles de encontrar</h3><p>Cuando Hacienda pide una factura de hace 8 meses, empieza la búsqueda desesperada entre carpetas y correos.</p></div>
       </div>
       <div class="dolor-card reveal">
-        <div style="font-size:1.4rem;flex-shrink:0;">📞</div>
-        <div><h3>Clientes preguntando siempre</h3><p>"¿Cuándo me vence la ITV?" "¿Tenéis mi seguro?" Llamadas que consumen tu jornada.</p></div>
+        <div style="font-size:1.4rem;flex-shrink:0;">📂</div>
+        <div><h3>Archivos desorganizados</h3><p>Cada cliente guarda sus facturas a su manera. El resultado es un caos de carpetas sin criterio uniforme.</p></div>
       </div>
       <div class="dolor-card reveal">
         <div style="font-size:1.4rem;flex-shrink:0;">😓</div>
-        <div><h3>Trabajo manual infinito</h3><p>Clasificar, archivar, recordar, avisar. Todo a mano. Todo en tu cabeza. Todo susceptible de error.</p></div>
+        <div><h3>Tu equipo haciendo trabajo de robot</h3><p>Personas cualificadas perdiendo horas en tareas repetitivas que una máquina puede hacer mejor y más rápido.</p></div>
       </div>
     </div>
   </div>
@@ -228,13 +213,13 @@ footer p{color:var(--muted);font-size:.82rem;}
 <section id="solucion">
   <div class="inner">
     <p class="tag reveal">La solución</p>
-    <h2 class="sec-title reveal">Implementamos sistemas que hacen ese trabajo solos</h2>
-    <p class="sec-sub reveal">Sin que tengas que aprender nada nuevo ni cambiar cómo trabajas.</p>
+    <h2 class="sec-title reveal">Un sistema que procesa las facturas de tus clientes solo</h2>
+    <p class="sec-sub reveal">Sin intervención humana. Sin errores. Sin tiempo perdido.</p>
     <div class="sol-grid">
-      <div class="sol-card reveal"><div class="ic">📂</div><h3>Guardan documentos automáticamente</h3><p>Cada documento llega a su carpeta correcta, con el nombre correcto, sin que nadie lo mueva.</p></div>
-      <div class="sol-card reveal"><div class="ic">🔔</div><h3>Detectan vencimientos</h3><p>El sistema lee las fechas de los documentos y sabe cuándo va a vencer cada uno.</p></div>
-      <div class="sol-card reveal"><div class="ic">✉️</div><h3>Envían avisos automáticos</h3><p>Cliente y gestoría reciben un aviso por email o WhatsApp antes de que venza cualquier documento.</p></div>
-      <div class="sol-card reveal"><div class="ic">🗂️</div><h3>Ordenan expedientes por cliente</h3><p>Cada transportista tiene su expediente digital completo, accesible en segundos.</p></div>
+      <div class="sol-card reveal"><div class="ic">📥</div><h3>Recepción automática</h3><p>El sistema recoge facturas de email, WhatsApp o carpetas compartidas sin que nadie las descargue manualmente.</p></div>
+      <div class="sol-card reveal"><div class="ic">🔎</div><h3>Lectura inteligente</h3><p>La IA extrae automáticamente todos los datos: proveedor, NIF, fecha, importe, concepto. Sin picar nada.</p></div>
+      <div class="sol-card reveal"><div class="ic">🗂️</div><h3>Clasificación por cliente</h3><p>Cada factura va a la carpeta del cliente correcto, con el nombre correcto, organizada por fecha y tipo.</p></div>
+      <div class="sol-card reveal"><div class="ic">🔗</div><h3>Integración con tu software</h3><p>Los datos van directamente a A3, Sage, Holded o donde trabajes. Sin exportar. Sin copiar y pegar.</p></div>
     </div>
   </div>
 </section>
@@ -245,17 +230,18 @@ footer p{color:var(--muted);font-size:.82rem;}
     <p class="tag reveal">Nuestro servicio</p>
     <div class="star-box reveal">
       <div class="star-badge">🔥 Servicio principal</div>
-      <h2>Sistema de control documental y vencimientos para gestorías de transporte</h2>
-      <p>Un único sistema que gestiona toda la documentación de tus clientes transportistas de forma automática. Sin picar datos. Sin recordar fechas. Sin buscar archivos.</p>
+      <h2>Sistema de organización y procesamiento automático de facturas para gestorías</h2>
+      <p>Un único sistema especializado en el ciclo completo de facturas: desde que el cliente te las manda hasta que están archivadas y contabilizadas. Sin que nadie las toque.</p>
       <ul class="feature-list">
-        <li>Recepción automática de documentos desde email y WhatsApp</li>
-        <li>Clasificación y archivo automático por cliente y tipo de documento</li>
-        <li>Detección de fechas de vencimiento en ITVs, seguros, carnets y permisos</li>
-        <li>Alertas automáticas a 30, 15 y 7 días del vencimiento</li>
-        <li>Panel de control con el estado de todos tus clientes de un vistazo</li>
-        <li>Sin instalaciones complicadas · Compatible con lo que ya usas</li>
+        <li>Recepción de facturas desde email, WhatsApp y carpetas compartidas</li>
+        <li>Extracción automática de datos con IA (proveedor, NIF, fecha, importe, IVA)</li>
+        <li>Clasificación y archivo automático por cliente, año y tipo de gasto</li>
+        <li>Detección de facturas duplicadas antes de que causen problemas</li>
+        <li>Volcado directo de datos a A3, Sage, Holded o tu ERP actual</li>
+        <li>Panel de control con el estado de facturas de todos tus clientes</li>
+        <li>Avisos automáticos cuando falta documentación de algún cliente</li>
       </ul>
-      <a href="#contacto" class="btn-primary">Quiero este sistema →</a>
+      <a href="#piloto" class="btn-primary">Quiero este sistema →</a>
     </div>
   </div>
 </section>
@@ -264,23 +250,23 @@ footer p{color:var(--muted);font-size:.82rem;}
 <section id="pasos">
   <div class="inner">
     <p class="tag reveal">Cómo funciona</p>
-    <h2 class="sec-title reveal">De la llamada al sistema funcionando en 3 pasos</h2>
-    <p class="sec-sub reveal">Sin procesos largos ni formaciones interminables.</p>
+    <h2 class="sec-title reveal">Del caos de facturas al sistema organizado en 3 pasos</h2>
+    <p class="sec-sub reveal">Sin procesos largos ni formaciones complicadas.</p>
     <div class="pasos-grid">
       <div class="paso reveal">
         <div class="paso-num">01</div>
-        <h3>Conectamos tus fuentes</h3>
-        <p>Email, WhatsApp, carpetas compartidas. Nos integramos donde ya recibes la documentación de tus clientes.</p>
+        <h3>Analizamos cómo recibes facturas</h3>
+        <p>Vemos de dónde te llegan las facturas de tus clientes: email, WhatsApp, papel escaneado. Nos adaptamos a tu flujo actual.</p>
       </div>
       <div class="paso reveal">
         <div class="paso-num">02</div>
-        <h3>Automatizamos clasificación y avisos</h3>
-        <p>Configuramos las reglas de archivo y los avisos de vencimiento adaptados a los documentos de tu sector.</p>
+        <h3>Configuramos el sistema a medida</h3>
+        <p>Conectamos las fuentes, entrenamos la IA con los tipos de facturas de tu sector y configuramos la integración con tu software.</p>
       </div>
       <div class="paso reveal">
         <div class="paso-num">03</div>
-        <h3>Sistema funcionando en días</h3>
-        <p>En menos de una semana tienes el sistema operativo. Te hacemos una formación de una hora y listo.</p>
+        <h3>Sistema funcionando en menos de una semana</h3>
+        <p>En 5-7 días tienes el sistema operativo. Las facturas empiezan a procesarse solas desde el primer día.</p>
       </div>
     </div>
   </div>
@@ -292,12 +278,12 @@ footer p{color:var(--muted);font-size:.82rem;}
     <p class="tag reveal">Qué consigues</p>
     <h2 class="sec-title reveal">Lo que cambia en tu gestoría</h2>
     <div class="res-grid">
-      <div class="res-card reveal"><div class="res-icon">✅</div><h3>Menos errores</h3><p>Ningún vencimiento olvidado. Ningún documento perdido.</p></div>
-      <div class="res-card reveal"><div class="res-icon">📞</div><h3>Menos llamadas</h3><p>Los clientes reciben avisos automáticos antes de preguntar.</p></div>
-      <div class="res-card reveal"><div class="res-icon">⏱️</div><h3>Menos trabajo manual</h3><p>El sistema hace lo repetitivo. Tú haces lo que añade valor.</p></div>
-      <div class="res-card reveal"><div class="res-icon">📋</div><h3>Más control</h3><p>Sabes el estado de cada cliente en tiempo real, sin buscar.</p></div>
-      <div class="res-card reveal"><div class="res-icon">🚀</div><h3>Más eficiencia</h3><p>Atiende más clientes sin contratar más personal.</p></div>
-      <div class="res-card reveal"><div class="res-icon">😌</div><h3>Más tranquilidad</h3><p>Sin depender de tu memoria ni de excels desactualizados.</p></div>
+      <div class="res-card reveal"><div class="res-icon">⏱️</div><h3>90% menos tiempo</h3><p>Lo que antes tardaba horas, ahora son segundos.</p></div>
+      <div class="res-card reveal"><div class="res-icon">✅</div><h3>Cero errores manuales</h3><p>La IA no se equivoca al leer un NIF ni un importe.</p></div>
+      <div class="res-card reveal"><div class="res-icon">🔍</div><h3>Facturas siempre localizables</h3><p>Cualquier factura, de cualquier cliente, en segundos.</p></div>
+      <div class="res-card reveal"><div class="res-icon">👥</div><h3>Equipo liberado</h3><p>Tu equipo deja de picar datos y se enfoca en asesorar.</p></div>
+      <div class="res-card reveal"><div class="res-icon">📈</div><h3>Más clientes, mismo equipo</h3><p>Puedes gestionar más volumen sin contratar más personal.</p></div>
+      <div class="res-card reveal"><div class="res-icon">😌</div><h3>Tranquilidad ante Hacienda</h3><p>Todo archivado, ordenado y listo para cualquier inspección.</p></div>
     </div>
   </div>
 </section>
@@ -314,54 +300,51 @@ footer p{color:var(--muted);font-size:.82rem;}
       </div>
       <div class="hon-card reveal">
         <div style="font-size:1.8rem;margin-bottom:.8rem;">🤝</div>
-        <p>Buscamos gestorías de transporte que quieran ser pioneras. A cambio, recibirás un trato completamente personalizado y una agencia que se deja la piel para que los resultados hablen solos.</p>
+        <p>Buscamos gestorías que quieran ser pioneras en automatizar sus facturas. A cambio, recibirás trato completamente personalizado y una agencia que se deja la piel para que los resultados hablen solos.</p>
       </div>
       <div class="hon-card reveal">
         <div style="font-size:1.8rem;margin-bottom:.8rem;">💡</div>
-        <p>El riesgo para ti es cero. Hacemos un piloto de 30 días, medimos el impacto real y si no ves mejoras concretas, no hay ninguna obligación. Así de simple.</p>
+        <p>El riesgo para ti es cero. Implementamos el sistema, lo probamos 30 días y si no ves que ahorra tiempo real en tu gestoría, no pagas absolutamente nada. Así de simple.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PILOTO -->
+<!-- OFERTA -->
 <section id="piloto">
   <div class="inner" style="text-align:center;">
     <p class="tag reveal">Oferta de lanzamiento</p>
     <div class="piloto-box reveal">
       <div style="display:inline-block;background:rgba(255,100,100,.1);border:1px solid rgba(255,100,100,.3);color:#ff8888;font-size:.75rem;padding:.3rem .9rem;border-radius:50px;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;">Solo para las 3 primeras gestorías</div>
-      <h2>Implementamos tu sistema documental completo.<br><span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Gratis. Sin letra pequeña.</span></h2>
-
+      <h2>Implementamos tu sistema de facturas completo.<br><span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Gratis. Sin letra pequeña.</span></h2>
       <p style="color:var(--muted);font-size:1.05rem;max-width:560px;margin:1.2rem auto 2rem;">Somos nuevos y lo decimos sin rodeos. En lugar de pedirte que confíes en nosotros, preferimos demostrarlo: implementamos el sistema entero en tu gestoría <strong style="color:var(--text)">sin cobrarte nada</strong> y dejamos que los resultados hablen.</p>
 
-      <!-- Lo que incluye -->
       <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;max-width:620px;margin:0 auto 2rem;text-align:left;">
         <p style="color:var(--accent2);font-size:.8rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.2rem;">Lo que recibes gratis</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.8rem;">
-          <li style="display:flex;gap:.8rem;align-items:flex-start;"><span style="color:var(--accent2);font-weight:700;font-size:1.1rem;flex-shrink:0;">✓</span><span style="color:var(--muted);font-size:.95rem;"><strong style="color:var(--text)">Análisis completo de tu gestoría</strong> — auditamos cómo gestionas documentación y vencimientos ahora mismo. <span style="color:var(--muted);font-size:.85rem;">(Valor: 300€)</span></span></li>
-          <li style="display:flex;gap:.8rem;align-items:flex-start;"><span style="color:var(--accent2);font-weight:700;font-size:1.1rem;flex-shrink:0;">✓</span><span style="color:var(--muted);font-size:.95rem;"><strong style="color:var(--text)">Implementación del sistema completo</strong> — clasificación automática, control de vencimientos y avisos. Todo configurado a medida. <span style="color:var(--muted);font-size:.85rem;">(Valor: 1.200€)</span></span></li>
-          <li style="display:flex;gap:.8rem;align-items:flex-start;"><span style="color:var(--accent2);font-weight:700;font-size:1.1rem;flex-shrink:0;">✓</span><span style="color:var(--muted);font-size:.95rem;"><strong style="color:var(--text)">Integración con tus herramientas actuales</strong> — email, WhatsApp, carpetas. Sin instalar nada nuevo. <span style="color:var(--muted);font-size:.85rem;">(Valor: 400€)</span></span></li>
-          <li style="display:flex;gap:.8rem;align-items:flex-start;"><span style="color:var(--accent2);font-weight:700;font-size:1.1rem;flex-shrink:0;">✓</span><span style="color:var(--muted);font-size:.95rem;"><strong style="color:var(--text)">Formación para tu equipo</strong> — sesión práctica de una hora para que todo el mundo sepa usarlo desde el primer día. <span style="color:var(--muted);font-size:.85rem;">(Valor: 150€)</span></span></li>
-          <li style="display:flex;gap:.8rem;align-items:flex-start;"><span style="color:var(--accent2);font-weight:700;font-size:1.1rem;flex-shrink:0;">✓</span><span style="color:var(--muted);font-size:.95rem;"><strong style="color:var(--text)">30 días de soporte directo</strong> — cualquier duda o ajuste, respondemos en menos de 24h. <span style="color:var(--muted);font-size:.85rem;">(Valor: 200€)</span></span></li>
+          <li style="display:flex;gap:.8rem;align-items:flex-start;"><span style="color:var(--accent2);font-weight:700;font-size:1.1rem;flex-shrink:0;">✓</span><span style="color:var(--muted);font-size:.95rem;"><strong style="color:var(--text)">Análisis de tu flujo de facturas actual</strong> — auditamos cómo recibes, procesas y archivas las facturas de tus clientes. <span style="color:var(--muted);font-size:.85rem;">(Valor: 300€)</span></span></li>
+          <li style="display:flex;gap:.8rem;align-items:flex-start;"><span style="color:var(--accent2);font-weight:700;font-size:1.1rem;flex-shrink:0;">✓</span><span style="color:var(--muted);font-size:.95rem;"><strong style="color:var(--text)">Implementación del sistema completo</strong> — extracción de datos, clasificación automática y archivo por cliente. Todo configurado. <span style="color:var(--muted);font-size:.85rem;">(Valor: 1.500€)</span></span></li>
+          <li style="display:flex;gap:.8rem;align-items:flex-start;"><span style="color:var(--accent2);font-weight:700;font-size:1.1rem;flex-shrink:0;">✓</span><span style="color:var(--muted);font-size:.95rem;"><strong style="color:var(--text)">Integración con tu software contable</strong> — conectamos con A3, Sage, Holded o el que uses. Los datos viajan solos. <span style="color:var(--muted);font-size:.85rem;">(Valor: 500€)</span></span></li>
+          <li style="display:flex;gap:.8rem;align-items:flex-start;"><span style="color:var(--accent2);font-weight:700;font-size:1.1rem;flex-shrink:0;">✓</span><span style="color:var(--muted);font-size:.95rem;"><strong style="color:var(--text)">Formación para tu equipo</strong> — sesión práctica de una hora para que todo el mundo arranque con confianza. <span style="color:var(--muted);font-size:.85rem;">(Valor: 150€)</span></span></li>
+          <li style="display:flex;gap:.8rem;align-items:flex-start;"><span style="color:var(--accent2);font-weight:700;font-size:1.1rem;flex-shrink:0;">✓</span><span style="color:var(--muted);font-size:.95rem;"><strong style="color:var(--text)">30 días de soporte directo</strong> — cualquier ajuste o duda, respondemos en menos de 24h. <span style="color:var(--muted);font-size:.85rem;">(Valor: 200€)</span></span></li>
         </ul>
         <div style="border-top:1px solid var(--border);margin-top:1.5rem;padding-top:1.2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;">
           <span style="color:var(--muted);font-size:.9rem;">Valor total del paquete:</span>
           <div>
-            <span style="color:var(--muted);text-decoration:line-through;font-size:1rem;margin-right:.6rem;">2.250€</span>
+            <span style="color:var(--muted);text-decoration:line-through;font-size:1rem;margin-right:.6rem;">2.650€</span>
             <span style="color:var(--accent2);font-size:1.6rem;font-weight:700;">0€</span>
           </div>
         </div>
       </div>
 
-      <!-- ¿Y después? -->
       <div style="background:rgba(108,99,255,.06);border:1px dashed rgba(108,99,255,.3);border-radius:10px;padding:1.2rem 1.8rem;max-width:560px;margin:0 auto 2rem;">
-        <p style="color:var(--muted);font-size:.92rem;"><strong style="color:var(--text)">¿Y después de los 30 días?</strong> Si el sistema te ha ahorrado tiempo y reducido errores, hablamos de una cuota de mantenimiento mensual. Si no ves resultados, no pagas nada y nos vamos tan amigos. Sin contratos. Sin permanencia.</p>
+        <p style="color:var(--muted);font-size:.92rem;"><strong style="color:var(--text)">¿Y después de los 30 días?</strong> Si el sistema te ha ahorrado tiempo real y reducido errores, hablamos de una cuota de mantenimiento mensual. Si no ves resultados, no pagas nada y nos vamos tan amigos. Sin contratos. Sin permanencia.</p>
       </div>
 
       <div class="plazas-badge">⚡ Solo quedan 3 plazas disponibles este mes</div>
       <br/><br/>
       <a href="#contacto" class="btn-primary" style="font-size:1.05rem;padding:1rem 2.5rem;">Quiero mi plaza gratuita →</a>
-      <p class="disclaimer" style="margin-top:1rem;">Sin permanencia · Sin letra pequeña · Sin riesgo · Solo 3 gestorías este mes</p>
+      <p class="disclaimer">Sin permanencia · Sin letra pequeña · Sin riesgo · Solo 3 gestorías este mes</p>
     </div>
   </div>
 </section>
@@ -372,8 +355,8 @@ footer p{color:var(--muted);font-size:.82rem;}
     <div class="contact-grid">
       <div class="contact-info reveal">
         <p class="tag">Hablemos</p>
-        <h2>¿Cuánto tiempo pierde tu gestoría cada semana con documentación?</h2>
-        <p>Cuéntanos cómo trabajas y te respondemos en menos de 24 horas.</p>
+        <h2>¿Cuántas horas pierde tu equipo procesando facturas cada semana?</h2>
+        <p>Cuéntanos cómo trabajas y te respondemos en menos de 24 horas con un diagnóstico gratuito.</p>
         <div class="c-item"><div class="c-icon">📧</div><span>contacto@naxautomations.com</span></div>
         <div class="c-item"><div class="c-icon">🕐</div><span>Respuesta en menos de 24h</span></div>
         <div class="c-item"><div class="c-icon">🌍</div><span>100% remoto · España</span></div>
@@ -384,16 +367,16 @@ footer p{color:var(--muted);font-size:.82rem;}
         <div class="fg"><label>Correo electrónico</label><input type="email" id="email" placeholder="tucorreo@gestoria.com"/></div>
         <div class="fg"><label>Nombre de tu gestoría</label><input type="text" id="empresa" placeholder="Gestoría Ejemplo S.L."/></div>
         <div class="fg">
-          <label>¿Cuántos transportistas gestionas?</label>
+          <label>¿Cuántas facturas procesáis al mes aproximadamente?</label>
           <select id="servicio">
             <option value="">Selecciona</option>
-            <option>Menos de 20</option>
-            <option>Entre 20 y 50</option>
-            <option>Entre 50 y 100</option>
-            <option>Más de 100</option>
+            <option>Menos de 100</option>
+            <option>Entre 100 y 500</option>
+            <option>Entre 500 y 1.000</option>
+            <option>Más de 1.000</option>
           </select>
         </div>
-        <div class="fg"><label>¿Cuál es tu mayor problema ahora mismo?</label><textarea id="mensaje" placeholder="Cuéntanos brevemente qué proceso te quita más tiempo..."></textarea></div>
+        <div class="fg"><label>¿Cuál es tu mayor problema con las facturas ahora mismo?</label><textarea id="mensaje" placeholder="Ej: las recibimos por WhatsApp sin orden, tardamos horas en clasificarlas..."></textarea></div>
         <button class="btn-submit" onclick="enviarFormulario()">Solicitar diagnóstico gratuito →</button>
         <div class="success-msg" id="success">✓ Solicitud recibida. Te contactamos en menos de 24 horas.</div>
       </div>
@@ -403,8 +386,8 @@ footer p{color:var(--muted);font-size:.82rem;}
 
 <footer>
   <span class="footer-logo">NAX</span>
-  <p>© 2026 NAX Automations · Especialistas en automatización documental para gestorías de transporte</p>
-  <p style="margin-top:.4rem;">España · contacto@naxautomations.com</p>
+  <p>© 2026 NAX Automations · Especialistas en automatización de facturas para gestorías · España</p>
+  <p style="margin-top:.4rem;">contacto@naxautomations.com</p>
 </footer>
 
 <script>
@@ -414,24 +397,21 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
-
 const navLinks=document.querySelectorAll('.nav-links a');
 const sectionIds=['dolor','solucion','servicio','pasos','resultados','honestidad','piloto','contacto'];
 const sections=sectionIds.map(id=>document.getElementById(id));
 function setActive(){
-  let current='';
-  sections.forEach(s=>{if(s&&window.scrollY>=s.offsetTop-100)current=s.id;});
-  navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));
+  let cur='';
+  sections.forEach(s=>{if(s&&window.scrollY>=s.offsetTop-100)cur=s.id;});
+  navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
 }
 window.addEventListener('scroll',setActive,{passive:true});
 setActive();
-
 const reveals=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
 },{threshold:0.1});
 reveals.forEach(el=>obs.observe(el));
-
 function enviarFormulario(){
   const n=document.getElementById('nombre').value;
   const e=document.getElementById('email').value;
